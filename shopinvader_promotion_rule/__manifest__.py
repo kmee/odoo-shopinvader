@@ -10,6 +10,6 @@
     "author": "Akretion, " "ACSONE SA / NV",
     "license": "AGPL-3",
     "application": False,
-    "installable": False,
+    "installable": True,
     "depends": ["shopinvader", "component", "sale_promotion_rule"],
 }

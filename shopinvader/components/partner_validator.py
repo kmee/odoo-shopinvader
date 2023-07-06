@@ -72,7 +72,8 @@ class PartnerValidator(Component):
         self._validate_partner_user(partner)
 
     def _allowed_partner_types(self):
-        return [x[0] for x in self.model._fields["address_type"].selection]
+        return ['profile', 'address']
+#        return [x[0] for x in self.model._fields["address_type"].selection]
 
     def enabled_by_params(self, params, partner_type="profile"):
         """Check if partner is enabled via given params by given partner type.

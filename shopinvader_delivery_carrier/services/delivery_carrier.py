@@ -150,7 +150,7 @@ class DeliveryCarrierService(Component):
 
     @property
     def allowed_carrier_types(self):
-        return []
+        return [None]
 
     @property
     def _json_parser_carrier(self):

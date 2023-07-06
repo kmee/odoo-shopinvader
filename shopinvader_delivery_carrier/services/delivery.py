@@ -70,7 +70,7 @@ class DeliveryService(Component):
         Hook to set required domain for pickings
         :return: list of tuples
         """
-        return []
+        return [None]
 
     def _validator_return_search(self):
         """
