@@ -18,6 +18,8 @@
         "shopinvader",
         "base_rest",
         "l10n_br_zip",
+        "shopinvader_base_address_city",
+        "shopinvader_base_address_extended",
     ],
-    "data": ["views/delivery_view.xml"],
+    # "data": ["views/delivery_view.xml"],
 }
