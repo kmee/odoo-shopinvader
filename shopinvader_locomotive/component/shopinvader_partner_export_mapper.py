@@ -11,7 +11,10 @@ class ShopinvaderPartnerExportMapper(Component):
     _inherit = ["locomotive.export.mapper"]
     _usage = "export.mapper"
 
-    direct = [("email", "email")]
+    direct = [
+        ("email", "email"),
+        ("external_id", "_slug")
+    ]
 
     @mapping
     def role(self, record):
