@@ -66,6 +66,7 @@ setuptools.setup(
         'odoo-addon-shopinvader_search_engine_update_product_brand_tag>=16.0dev,<16.1dev',
         'odoo-addon-shopinvader_search_engine_update_product_media>=16.0dev,<16.1dev',
         'odoo-addon-shopinvader_search_engine_update_product_template_multi_link>=16.0dev,<16.1dev',
+        'odoo-addon-shopinvader_v2_app_demo>=16.0dev,<16.1dev',
     ],
     classifiers=[
         'Programming Language :: Python',
