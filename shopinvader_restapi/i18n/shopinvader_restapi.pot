@@ -594,6 +594,11 @@ msgid "Date"
 msgstr ""
 
 #. module: shopinvader_restapi
+#: model:ir.model.fields,help:shopinvader_restapi.field_shopinvader_partner__property_delivery_carrier_id
+msgid "Default delivery method used in sales orders."
+msgstr ""
+
+#. module: shopinvader_restapi
 #: model:ir.model.fields,help:shopinvader_restapi.field_shopinvader_backend__cart_checkout_address_policy
 msgid ""
 "Define how the cart address will be handled in the checkout step:\n"
@@ -614,6 +619,11 @@ msgstr ""
 #. module: shopinvader_restapi
 #: model_terms:ir.ui.view,arch_db:shopinvader_restapi.shopinvader_backend_view_form
 msgid "Delivery"
+msgstr ""
+
+#. module: shopinvader_restapi
+#: model:ir.model.fields,field_description:shopinvader_restapi.field_shopinvader_partner__property_delivery_carrier_id
+msgid "Delivery Method"
 msgstr ""
 
 #. module: shopinvader_restapi
@@ -919,6 +929,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:shopinvader_restapi.field_shopinvader_partner__invoice_ids
 #: model_terms:ir.ui.view,arch_db:shopinvader_restapi.shopinvader_backend_view_form
 msgid "Invoices"
+msgstr ""
+
+#. module: shopinvader_restapi
+#: model:ir.model.fields,field_description:shopinvader_restapi.field_shopinvader_partner__is_coa_installed
+msgid "Is Coa Installed"
 msgstr ""
 
 #. module: shopinvader_restapi
