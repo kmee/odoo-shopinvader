@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2025 KMEE
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record model="ir.ui.view" id="res_partner_form_view">
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <page name="sales_purchases" position="after">
+                <page name="seo" string="SEO">
+                    <group name="meta_and_url">
+                        <field name="description" />
+                        <field name="short_description" />
+                        <field name="seo_title" />
+                        <field name="meta_keywords" />
+                        <field name="meta_description" />
+                    </group>
+                </page>
+            </page>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_partner_tree">
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree" />
+        <field name="arch" type="xml">
+            <field name="display_name" position="before">
+                <field name="sequence" widget="handle" />
+            </field>
+        </field>
+    </record>
+
+</odoo>
