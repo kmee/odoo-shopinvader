@@ -2,6 +2,7 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 from __future__ import annotations
 
+from datetime import date, datetime
 from enum import Enum
 
 import pydantic
@@ -70,6 +71,8 @@ class ProductAttribute(StrictExtendableBaseModel):
             return value.mapped("display_name")
         elif string_mode and attr.attribute_type == "boolean":
             return "true" if value else "false"
+        elif isinstance(value, (date, datetime)):
+            return value.isoformat() or ""
         elif string_mode or attr.attribute_type in ("char", "text"):
             return "%s" % (value or "")
         return value or ""
