@@ -47,6 +47,7 @@ class ProductAttribute(StrictExtendableBaseModel):
         str
     ] | str
     type: ProductAttributeType
+    is_filterable: bool = False
 
     @classmethod
     def _get_value_for_attribute(
@@ -88,4 +89,5 @@ class ProductAttribute(StrictExtendableBaseModel):
             type=ProductAttributeType.safe_get(
                 attribute.attribute_type or attribute.ttype
             ),
+            is_filterable=attribute.attribute_usage == "filter",
         )
