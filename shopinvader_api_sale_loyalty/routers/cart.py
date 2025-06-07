@@ -69,6 +69,28 @@ def apply_reward(
     return Sale.from_sale_order(cart) if cart else None
 
 
+@sale_loyalty_cart_router.delete("/coupon/{uuid}")
+@sale_loyalty_cart_router.delete("/current/coupon")
+@sale_loyalty_cart_router.delete("/coupon")
+def remove_coupon(
+    data: LoyaltyCardInput,
+    env: Annotated[api.Environment, Depends(authenticated_partner_env)],
+    partner: Annotated[ResPartner, Depends(authenticated_partner)],
+    uuid: UUID | None = None,
+) -> Sale | None:
+    """
+    Remove a coupon from a specific cart.
+
+    One can specify in LoyaltyCartInput which reward to remove.
+    If some info is missing to uniquely determine which reward to remove,
+    raise an error.
+    """
+    cart = env["sale.order"]._find_open_cart(partner.id, str(uuid) if uuid else None)
+    if cart:
+        env["shopinvader_api_cart.cart_router.helper"]._remove_coupon(cart, data)
+    return Sale.from_sale_order(cart) if cart else None
+
+
 class ShopinvaderApiCartRouterHelper(models.AbstractModel):
     _inherit = "shopinvader_api_cart.cart_router.helper"
 
@@ -203,4 +225,38 @@ class ShopinvaderApiCartRouterHelper(models.AbstractModel):
         if cart:
             cart._update_programs_and_rewards()
             self._apply_automatic_rewards(cart)
+        return cart
+
+    @api.model
+    def _remove_coupon(self, cart: "SaleOrder", data: LoyaltyCardInput):
+        """Remove a coupon or promotion code.
+
+        It can raise UserError if coupon is not found in the cart,
+        or if the coupon has multiple rewards and the selected reward is not specified.
+        """
+        # First check if the coupon exists in the cart
+        if not cart.coupon_point_ids.filtered(lambda c: c.code == data.code):
+            raise UserError(_("Coupon code not found in cart."))
+
+        # Get all reward lines for this coupon
+        reward_lines = cart.order_line.filtered(
+            lambda l: l.is_reward_line and l.coupon_id.code == data.code
+        )
+
+        if not reward_lines:
+            raise UserError(_("No reward lines found for this coupon."))
+
+        # If a specific reward was requested, filter for that
+        if data.reward_id:
+            reward_lines = reward_lines.filtered(
+                lambda l: l.reward_id.id == data.reward_id
+            )
+            if not reward_lines:
+                raise UserError(_("Specified reward not found for this coupon."))
+
+        # Remove the reward lines
+        reward_lines.unlink()
+
+        # Update the cart rewards
+        cart._update_programs_and_rewards()
         return cart
