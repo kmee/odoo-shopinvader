@@ -21,7 +21,6 @@
                     <field name="password_validity" />
                     <field
                         name="password_reset_template_id"
-                        attrs="{'required': [('password_validity', '>', 0)]}"
                     />
                 </group>
             </xpath>
