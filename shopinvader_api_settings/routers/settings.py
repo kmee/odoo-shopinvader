@@ -1,6 +1,14 @@
 # Copyright 2024 ACSONE SA/NV
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
+
+from odoo.addons.shopinvader_api_settings.schemas.settings import Settings
+from ..schemas import Settings
+from ..schemas.country import Country
+from ..schemas.lang import Lang
+from ..schemas.partner_title import PartnerTitle
+
+
 from typing import Annotated
 
 from fastapi import APIRouter, Depends
@@ -10,10 +18,6 @@ from odoo import api, fields, models
 from odoo.addons.fastapi.dependencies import fastapi_endpoint, odoo_env
 from odoo.addons.fastapi.models import FastapiEndpoint
 
-from ..schemas import Settings
-from ..schemas.country import Country
-from ..schemas.lang import Lang
-from ..schemas.partner_title import PartnerTitle
 
 settings_router = APIRouter(tags=["settings"])
 

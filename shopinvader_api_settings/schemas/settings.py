@@ -12,3 +12,7 @@ class Settings(StrictExtendableBaseModel):
     countries: list[Country] = []
     partner_titles: list[PartnerTitle] = []
     langs: list[Lang] = []
+
+    # @classmethod
+    # def from_shopinvader_backend(cls, odoo_rec):
+    #     return cls.model_construct(countries=[], partner_titles=[], langs=[])
