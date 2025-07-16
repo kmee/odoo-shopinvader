@@ -5,7 +5,7 @@
     "name": "Shopinvader Seach Engine Product Brand Tag",
     "summary": """
         Mark brand and product bindings to export on product image tag update""",
-    "version": "16.0.1.0.0",
+    "version": "17.0.1.0.0",
     "license": "AGPL-3",
     "author": "ACSONE SA/NV",
     "website": "https://github.com/shopinvader/odoo-shopinvader",
