@@ -10,7 +10,6 @@
                             name="web_ribbon"
                             title="Archived"
                             bg_color="bg-danger"
-                            attrs="{'invisible': [('active', '=', True)]}"
                         />
                         <field name="active" invisible="1" />
                         <button
@@ -51,7 +50,6 @@
                         <page
                             name="search_eng"
                             string="Search engine"
-                            attrs="{'invisible': [('frontend_data_source', '!=', 'search_engine')]}"
                         >
                             <group name="website_name">
                                 <field name="website_public_name" />
