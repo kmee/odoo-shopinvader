@@ -13,7 +13,6 @@
             <div name="options" position="after">
                 <div
                     name="company_shopinvader_options"
-                    attrs="{'invisible': [('shopinvader_company_backend_id', '=', False)]}"
                 >
                     <field name="shopinvader_company_backend_id" invisible="1" />
                     <div name="company_shopinvader_published">
