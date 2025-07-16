@@ -14,8 +14,7 @@
                     string="Confirm Cart"
                     class="btn-primary o_sale_confirm"
                     type="object"
-                    attrs="{'invisible': [('typology', '!=', 'cart')]}"
-                />
+                    invisible="typology != 'cart'"/>
             </button>
             <field name="partner_id" position="after">
                 <field name="typology" invisible="True" />

@@ -3,7 +3,7 @@
 from openupgradelib import openupgrade
 
 
-def pre_init_hook(cr):
+def pre_init_hook(env):
     """Loaded before installing the module.
     :param odoo.sql_db.Cursor cr:
         Database cursor.
@@ -11,5 +11,5 @@ def pre_init_hook(cr):
     """
     # Moved fields from shopinvader
     openupgrade.update_module_moved_fields(
-        cr, "sale.order", ["typology"], "shopinvader", "sale_cart"
+        env.cr, "sale.order", ["typology"], "shopinvader", "sale_cart"
     )
