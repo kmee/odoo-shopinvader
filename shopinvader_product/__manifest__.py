@@ -4,7 +4,7 @@
 {
     "name": "Shopinvader Product",
     "summary": """Adds shopinvader product fields and schemas""",
-    "version": "16.0.1.0.5",
+    "version": "17.0.1.0.0",
     "license": "AGPL-3",
     "author": "ACSONE SA/NV",
     "website": "https://github.com/shopinvader/odoo-shopinvader",
