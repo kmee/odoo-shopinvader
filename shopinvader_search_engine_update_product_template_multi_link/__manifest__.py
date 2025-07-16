@@ -5,7 +5,7 @@
     "name": "Shopinvader Search Engine Update Product Template Multi Link",
     "summary": """
         Mark bindings to recompute when a link is added, deleted or modified""",
-    "version": "16.0.1.0.0",
+    "version": "17.0.1.0.0",
     "license": "AGPL-3",
     "author": "ACSONE SA/NV",
     "website": "https://github.com/shopinvader/odoo-shopinvader",
