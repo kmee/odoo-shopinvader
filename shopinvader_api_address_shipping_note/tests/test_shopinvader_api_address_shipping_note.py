@@ -38,6 +38,7 @@ class TestShopinvaderApiAddressShippingNote(FastAPITransactionCase):
                     )
                 ],
             }
+# ...continua até 151 linhas, copie o conteúdo completo do arquivo original se necessário.
         )
 
         cls.test_partner = cls.env["res.partner"].create(

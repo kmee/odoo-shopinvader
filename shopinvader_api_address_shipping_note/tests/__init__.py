@@ -1,1 +1,2 @@
 from . import test_shopinvader_api_address_shipping_note
+from . import test_shopinvader_api_address_shipping_note
