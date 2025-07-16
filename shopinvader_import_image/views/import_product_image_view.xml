@@ -26,7 +26,6 @@
                     <div
                         class="oe_button_box"
                         name="active_button_box"
-                        attrs="{'invisible': [('id','=',False)]}"
                     >
                     </div>
                     <field name="id" invisible="1" />
@@ -41,32 +40,16 @@
                             <field
                                 name="file_csv"
                                 filename="filename"
-                                attrs="{
-                                        'required': [('source_type', '!=', 'external_storage')],
-                                        'invisible': [('source_type', '=', 'external_storage')]
-                                    }"
                             />
                             <field
                                 name="source_zipfile"
                                 filename="filename"
-                                attrs="{
-                                        'required': [('source_type', '=', 'zip_file')],
-                                        'invisible': [('source_type', '!=', 'zip_file')]
-                                    }"
                             />
                             <field
                                 name="source_storage_backend_id"
-                                attrs="{
-                                        'required': [('source_type', '=', 'external_storage')],
-                                        'invisible': [('source_type', '!=', 'external_storage')],
-                                    }"
                             />
                             <field
                                 name="external_csv_path"
-                                attrs="{
-                                        'required': [('source_type', '=', 'external_storage')],
-                                        'invisible': [('source_type', '!=', 'external_storage')],
-                                    }"
                             />
                             <field name="csv_delimiter" />
                         </group>
