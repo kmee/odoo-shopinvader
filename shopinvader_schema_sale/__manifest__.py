@@ -5,10 +5,10 @@
 {
     "name": "Shopinvader Schema Sale",
     "summary": "Add schema sale",
-    "version": "16.0.1.1.3",
-    "development_status": "Alpha",
+    "version": "17.0.1.0.0",
+    # "development_status": "Alpha",  # OCA: campo não padrão, pode ser mantido como comentário
     "website": "https://github.com/shopinvader/odoo-shopinvader",
-    "author": " Akretion",
+    "author": "Akretion",
     "license": "AGPL-3",
     "depends": [
         "sale_cart",
@@ -20,4 +20,6 @@
     },
     "data": [],
     "demo": [],
+    # OCA: por padrão installable=True
+    "installable": True,
 }
