@@ -11,11 +11,9 @@
                     <group
                     name="shopinvader_configuration"
                     title="Configuration"
-                    attrs="{'invisible': [('app', '!=', 'shopinvader_demo')]}"
                 >
                         <field
                         name="auth_jwt_validator_id"
-                        attrs="{'required': [('app', '=', 'shopinvader_demo')]}"
                     />
                     </group>
                 </span>
