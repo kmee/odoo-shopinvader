@@ -16,7 +16,6 @@
                     class="alert alert-danger"
                     role="alert"
                     colspan="4"
-                    attrs="{'invisible': ['|', ('product_stock_forecast', '=', False), ('product_stock_field_name', '=', 'qty_available')]}"
                 >
                     <strong>Warning</strong>:
                     The stock forecast is prepared to work best with <code
@@ -27,11 +26,9 @@
                 <label
                     for="product_stock_forecast_horizon"
                     string="Forecast Horizon"
-                    attrs="{'invisible': [('product_stock_forecast', '=', False)]}"
                 />
                 <div
                     name="product_stock_forecast_horizon"
-                    attrs="{'invisible': [('product_stock_forecast', '=', False)]}"
                 >
                     <field name="product_stock_forecast_horizon" class="oe_inline" />
                     <span class="ml-1">days</span>
