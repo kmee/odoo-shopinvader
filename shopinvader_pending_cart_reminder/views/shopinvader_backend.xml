@@ -17,7 +17,6 @@
                         <field name="pending_cart_reminder_delay" />
                         <field
                             name="pending_cart_reminder_template_id"
-                            attrs="{'invisible': [('pending_cart_reminder_delay', '&lt;=', 0)], 'required': [('pending_cart_reminder_delay', '&gt;', 0)]}"
                         />
                     </group>
                     <group />
