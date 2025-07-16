@@ -243,7 +243,9 @@ class ShopinvaderBackend(models.Model):
 
     @api.model
     def _default_pricelist_id(self):
-        return self.env.ref("product.list0")
+        return self.env['product.pricelist'].search([], limit=1) or self.env.ref(
+            "product.list0", raise_if_not_found=False
+        )
 
     @api.model
     def _default_partner_title_ids(self):

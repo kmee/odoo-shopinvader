@@ -10,12 +10,10 @@
                 <field name="typology" invisible="True" />
                 <field
                     name="current_step_id"
-                    attrs="{'invisible': [('typology', '!=', 'cart')]}"
                 />
                 <field
                     name="done_step_ids"
                     widget="many2many_tags"
-                    attrs="{'invisible': [('typology', '!=', 'cart')]}"
                 />
             </field>
         </field>
