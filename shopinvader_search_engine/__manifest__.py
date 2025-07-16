@@ -5,7 +5,7 @@
 
 {
     "name": "Shopinvader Catalog Search Engine Connector",
-    "version": "16.0.1.0.6",
+    "version": "17.0.1.0.0",
     "author": "Akretion",
     "website": "https://github.com/shopinvader/odoo-shopinvader",
     "license": "AGPL-3",
