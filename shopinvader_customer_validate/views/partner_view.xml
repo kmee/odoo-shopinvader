@@ -18,12 +18,10 @@
                     <field name="has_shopinvader_user_active" invisible="1" />
                     <field
                         name="has_shopinvader_user_to_validate"
-                        attrs="{'invisible':[('has_shopinvader_user_to_validate','=',False)]}"
                     />
                     <field
                         name="is_shopinvader_active"
                         readonly="1"
-                        attrs="{'invisible':[('has_shopinvader_user','=',True)]}"
                     />
                     <field name="display_validate_address" invisible="1" />
                     <button
@@ -31,20 +29,17 @@
                         name="action_shopinvader_validate_customer"
                         type="object"
                         title="Validate user for Shopinvader"
-                        attrs="{'invisible':['|', ('has_shopinvader_user_active', '=', True), ('has_shopinvader_user', '=', False) ]}"
                         icon="fa-user-o"
                     >
                         Shop: validate user
                     </button>
                     <div
-                        attrs="{'invisible':[('display_validate_address', '=', False)]}"
                     >
                         <button
                             class="btn btn-sm btn-success"
                             name="action_shopinvader_validate_address"
                             type="object"
                             title="Validate address for Shopinvader"
-                            attrs="{'invisible':[('is_shopinvader_active', '=', True)]}"
                             icon="fa-address-card-o"
                         >
                         Shop: validate address
@@ -55,7 +50,6 @@
                             type="object"
                             context="{'default_next_state': 'inactive'}"
                             title="Deactivate address for Shopinvader"
-                            attrs="{'invisible':[('is_shopinvader_active', '=', False)]}"
                             icon="fa-address-card-o"
                         >
                         Shop: deactivate address
@@ -71,7 +65,6 @@
                     name="action_shopinvader_validate_customer"
                     type="object"
                     title="There's at least one Shopinvader user to validate"
-                    attrs="{'invisible':[('has_shopinvader_user_to_validate','=',False)]}"
                     icon="fa-user-o"
                 >
                   Shop: validate users
@@ -82,7 +75,6 @@
                     context="{'shopinvader__validate_customer_children': True}"
                     type="object"
                     title="There's at least one address to validate for Shopinvader"
-                    attrs="{'invisible':[('has_shopinvader_address_to_validate','=',False)]}"
                     icon="fa-address-card-o"
                 >
                   Shop: validate addresses
