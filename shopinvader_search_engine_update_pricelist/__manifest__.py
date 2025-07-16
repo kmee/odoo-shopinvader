@@ -5,7 +5,7 @@
     "name": "Shopinvader Search Engine Update Pricelist",
     "summary": "Shopinvader: Mark product binding to export on Product Pricelist update",
     "author": "Camptocamp, Odoo Community Association (OCA)",
-    "version": "16.0.1.0.0",
+    "version": "17.0.1.0.0",
     "license": "AGPL-3",
     "website": "https://github.com/shopinvader/odoo-shopinvader",
     "depends": [
