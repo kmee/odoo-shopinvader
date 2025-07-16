@@ -9,15 +9,13 @@
       <field name="typology" position="after">
         <field
                     name="cart_step_id"
-                    attrs="{'invisible': [('typology', '!=', 'cart')]}"
-                    context="{'active_test': False}"
-                />
+                    invisible="typology != 'cart'"
+                    context="{'active_test': False}"/>
         <field
                     name="cart_step_done_ids"
                     widget="many2many_tags"
-                    attrs="{'invisible': [('typology', '!=', 'cart')]}"
-                    context="{'active_test': False}"
-                />
+                    invisible="typology != 'cart'"
+                    context="{'active_test': False}"/>
       </field>
     </field>
   </record>
