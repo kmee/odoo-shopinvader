@@ -24,15 +24,15 @@ def _rename_applied_transaction_uuids(env):
     )
 
 
-def pre_init_hook(cr):
-    cr.execute("SELECT name FROM ir_module_module WHERE name='sale_cart_rest_api';")
-    if cr.fetchall():
+def pre_init_hook(env):
+    env.cr.execute("SELECT name FROM ir_module_module WHERE name='sale_cart_rest_api';")
+    if env.cr.fetchall():
         _logger.info("Rename sale_cart_rest_api to shopinvader_api_cart")
         openupgrade.update_module_names(
-            cr, [("sale_cart_rest_api", "shopinvader_api_cart")], True
+            env.cr, [("sale_cart_rest_api", "shopinvader_api_cart")], True
         )
 
     # Rename applied_transaction_uuids -> applied_cart_api_transaction_uuids
     # Nothing done if column doesn't exist
-    env = api.Environment(cr, SUPERUSER_ID, {})
-    _rename_applied_transaction_uuids(env)
+    env2 = api.Environment(env.cr, SUPERUSER_ID, {})
+    _rename_applied_transaction_uuids(env2)
