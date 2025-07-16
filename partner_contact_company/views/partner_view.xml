@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
             <field name="name" position="after">
                 <field name="company" placeholder="Company" class="oe_edit_only"
-                       attrs="{'required': [('is_company','=', True)]}"/>
+                       />
                 <field name="contact_name" placeholder="Contact name" class="oe_edit_only"/>
             </field>
             <field name="name" position="attributes">
@@ -18,7 +18,6 @@
                 <field name="contact_name" placeholder="Contact name" class="oe_edit_only"/>
             </xpath>
             <xpath expr="//field[@name='child_ids']/form/sheet/group/group/field[@name='name']" position="attributes">
-                <attribute name="attrs"></attribute>
                 <attribute name="class">oe_read_only</attribute>
             </xpath>
             <xpath expr="//field[@name='child_ids']" position="attributes">
