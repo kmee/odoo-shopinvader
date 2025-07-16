@@ -12,7 +12,6 @@
                 <field name="is_guest_mode_allowed" />
                 <field
                     name="guest_account_expiry_delay"
-                    attrs="{'invisible': [('is_guest_mode_allowed', '=', False)]}"
                 />
             </group>
         </field>
