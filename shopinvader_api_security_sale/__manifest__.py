@@ -28,4 +28,5 @@
         "security/rule+acl_sale_order_line.xml",
     ],
     "demo": [],
+    "installable": True,
 }
