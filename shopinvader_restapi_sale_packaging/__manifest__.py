@@ -6,7 +6,7 @@
     "Summary": """
         REST services take care of if products are sold by packagings.
     """,
-    "version": "16.0.1.1.0",
+    "version": "17.0.1.0.0",
     "license": "AGPL-3",
     "author": "Camptocamp, ACSONE",
     "website": "https://github.com/shopinvader/odoo-shopinvader",
