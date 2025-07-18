@@ -23,4 +23,5 @@
         "views/sale_view.xml",
     ],
     "demo": [],
+    "installable": True,
 }
