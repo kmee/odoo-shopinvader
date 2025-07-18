@@ -11,5 +11,6 @@
     "depends": ["shopinvader_product"],
     "data": ["views/product_category.xml", "views/product_template.xml"],
     "demo": [],
+    "installable": True,
     "development_status": "Alpha",
 }
