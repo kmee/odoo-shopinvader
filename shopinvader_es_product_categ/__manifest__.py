@@ -4,9 +4,9 @@
 
 {
     "name": "Shopinvader Product Hierarchical Category for Elasticsearch/OpenSearch",
-    "summary": "Add the hierarchicalCategories field in the product index "
+    "summary":    "Add the hierarchicalCategories field in the product index "
     "required for faceting",
-    "version": "16.0.1.0.0",
+    "version": "17.0.1.0.0",
     "category": "Shopinvader",
     "website": "https://github.com/shopinvader/odoo-shopinvader",
     "author": " ACSONE SA/NV",
