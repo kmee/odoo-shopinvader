@@ -63,4 +63,5 @@
         "demo/se_image_field_thumbnail_size.xml",
         "demo/fs_storage.xml",
     ],
+    "installable": True,
 }
