@@ -4,7 +4,7 @@
 
 {
     "name": "Product Online Category",
-    "version": "10.0.1.0.0",
+    "version": "17.0.1.0.0",
     "category": "Tools",
     "license": "AGPL-3",
     "summary": "Product categories dedicated to online shop",
