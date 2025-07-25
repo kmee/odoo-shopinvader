@@ -7,7 +7,7 @@
         "Add possibility to replace the image URL "
         "by the proxy url set on the SE backend"
     ),
-    "version": "14.0.1.0.2",
+    "version": "17.0.1.0.0",
     "category": "e-commerce",
     "author": "Akretion,ACSONE SA/NV",
     "website": "https://github.com/shopinvader/odoo-shopinvader",
