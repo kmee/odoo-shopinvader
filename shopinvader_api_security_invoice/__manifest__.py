@@ -5,7 +5,7 @@
 {
     "name": "Shopinvader Api Security invoice",
     "summary": "Add security rule to expose invoices",
-    "version": "16.0.1.0.1",
+    "version": "17.0.1.0.0",
     "development_status": "Alpha",
     "category": "Uncategorized",
     "website": "https://github.com/shopinvader/odoo-shopinvader",
