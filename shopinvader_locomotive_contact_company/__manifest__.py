@@ -5,7 +5,7 @@
 {
     "name": "Shopinvader Locomotive Contact Company",
     "summary": "Synchronize the contact_name with customer name",
-    "version": "10.0.1.0.0",
+    "version": "17.0.1.0.0",
     "category": "e-commerce",
     "website": "https://github.com/shopinvader/odoo-shopinvader",
     "author": "Akretion",
