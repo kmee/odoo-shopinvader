@@ -4,7 +4,7 @@
 {
     "name": "Shopinvader category image for product",
     "summary": "Shopinvader Display category image for product",
-    "version": "14.0.1.0.1",
+    "version": "17.0.1.0.0",
     "category": "e-commerce",
     "author": "ACSONE SA/NV",
     "website": "https://github.com/shopinvader/odoo-shopinvader",
