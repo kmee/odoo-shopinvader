@@ -5,7 +5,7 @@
 {
     "name": "Shopinvader Customer Invoicing Mode",
     "summary": "Glue module to expose the invoicing_mode field to shopinvader",
-    "version": "14.0.1.0.0",
+    "version": "17.0.1.0.0",
     "category": "e-commerce",
     "website": "https://github.com/shopinvader/odoo-shopinvader",
     "author": "Camptocamp",
