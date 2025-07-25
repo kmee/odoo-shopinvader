@@ -5,7 +5,7 @@
 {
     "name": "Shopinvader Multi-Cart",
     "summary": "Manage multiple carts in Shopinvader",
-    "version": "14.0.1.1.1",
+    "version": "17.0.1.0.0",
     "license": "AGPL-3",
     "author": "Camptocamp SA",
     "website": "https://github.com/shopinvader/odoo-shopinvader",
